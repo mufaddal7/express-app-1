@@ -5,7 +5,9 @@ ports:
 tasks:
   - init: npm install
     command: npm start
-links:
-  - url: https://dashboard.example.com
-    title: My Dashboard
-    icon: dashboard
+metadata:
+  name: example
+  links:
+    - url: https://dashboard.example.com
+      title: My Dashboard
+      icon: dashboard
