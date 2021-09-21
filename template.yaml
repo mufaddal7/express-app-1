@@ -9,7 +9,7 @@ metadata:
     - helm
     - demo
 spec:
-  owner: cpe
+  owner: feature
   type: service
   parameters:
     - title: Configure Your Demo Node.js Service
@@ -46,25 +46,4 @@ spec:
           ui:options:
             allowedHosts:
               - gitlab.com
-  steps:
-    - id: template
-      name: Fetch Skeleton + Template
-      action: fetch:template
-      input:
-        url: ./template
-        values:
-          service_name: '{{ parameters.service_name }}'
-          owner: '{{ parameters.owner }}'
-          docker_namespace: '{{ parameters.docker_namespace }}'
-          destination: '{{ parseRepoUrl parameters.repoUrl }}'
-    - id: publish
-      name: Publish
-      action: publish:gitlab
-      input:
-        allowedHosts: ['gitlab.com']
-        description: 'A simple "Hello World" node.js application deployable to EKS'
-        repoUrl: '{{ parameters.repoUrl }}'
-
-  output:
-    remoteUrl: '{{ steps.publish.output.remoteUrl }}'
-    entityRef: '{{ steps.register.output.entityRef }}'
+ 
