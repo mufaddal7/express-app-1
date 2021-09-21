@@ -1,41 +1,37 @@
 apiVersion: backstage.io/v1beta2
 kind: Template
 metadata:
-  name: create-react-app-template
-  title: Create React App Template
-  description: Create a new CRA website project
-  tags:
-    - react
-    - cra
+  name: pull-request
+  title: Pull Request Action template
+  description: scaffolder v1beta2 template demo publishing to PR on existing git repository
 spec:
-  owner: web@example.com
-  type: website
+  owner: backstage/techdocs-core
+  type: service
+
   parameters:
-    - title: Provide some simple information
+    - title: Fill in some steps
       required:
-        - component_id
-        - owner
+        - name
       properties:
-        component_id:
+        name:
           title: Name
           type: string
           description: Unique name of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
         description:
           title: Description
           type: string
-          description: Help others understand what this website is for.
-        owner:
-          title: Owner
+          description: Description of the component
+        targetPath:
+          title: Target Path in repo
           type: string
-          description: Owner of the component
-          ui:field: OwnerPicker
-          ui:options:
-            allowedKinds: 
-              - Group
-    - title: Choose a location  
+          description: Name of the directory to create in the repository
+    - title: Choose a location
       required:
         - repoUrl
-      properties: 
+      properties:
         repoUrl:
           title: Repository Location
           type: string
@@ -43,35 +39,38 @@ spec:
           ui:options:
             allowedHosts:
               - github.com
+
   steps:
-    - id: template
-      name: Fetch Skeleton + Template
+    - id: fetch-base
+      name: Fetch Base
       action: fetch:template
       input:
-        url: ./skeleton
-        copyWithoutRender:
-          - .github/workflows/*
+        url: ./template
         values:
-          component_id: '{{ parameters.component_id }}'
-          description: '{{ parameters.description }}'
-          destination: '{{ parseRepoUrl parameters.repoUrl }}'
-          owner: '{{ parameters.owner }}'
+          name: '{{parameters.name}}'
+
+    - id: fetch-docs
+      name: Fetch Docs
+      action: fetch:plain
+      input:
+        targetPath: ./community
+        url: https://github.com/backstage/community/tree/main/backstage-community-sessions
 
     - id: publish
       name: Publish
-      action: publish:github
+      action: publish:github:pull-request
       input:
-        allowedHosts: ['github.com']
-        description: 'This is {{ parameters.component_id }}'
         repoUrl: '{{ parameters.repoUrl }}'
-
-    - id: register
-      name: Register
-      action: catalog:register
-      input:
-        repoContentsUrl: '{{ steps.publish.output.repoContentsUrl }}'
-        catalogInfoPath: '/catalog-info.yaml'
+        title: 'Create new project: {{parameters.name}}'
+        branchName: 'create-{{parameters.name}}'
+        description: |
+          # New project: {{parameters.name}}
+          {{#if parameters.description}}
+          {{parameters.description}}
+          {{/if}}
+        targetPath: '{{#if parameters.targetPath}}{{parameters.targetPath}}{{else}}{{parameters.name}}{{/if}}'
 
   output:
-    remoteUrl: '{{ steps.publish.output.remoteUrl }}'
-    entityRef: '{{ steps.register.output.entityRef }}'
+    links: 
+      - url: '{{steps.publish.output.remoteUrl}}'
+        text: 'Go to PR'
