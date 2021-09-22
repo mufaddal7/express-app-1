@@ -35,7 +35,7 @@ spec:
           title: Data Classification
           type: string
           description: AWS Tag - Defined by DAVE tagging
-          ui:field: TextValuePicker
+          ui:field: EntityNamePicker
           ui:options:
             title:
               - HighlyConfidential
