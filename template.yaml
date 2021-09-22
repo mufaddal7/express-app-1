@@ -46,6 +46,20 @@ spec:
           ui:options:
             allowedHosts:
               - gitlab.com
+    - title: Data classification
+      required:
+        - AWSTags
+      properties:
+        AWSTags:
+          title: AWS Tag - Defined by DAVE tagging
+          type: string
+          ui:field: TagPicker
+          ui:options:
+            tagAssigned:
+              - HighlyConfidential
+              - Confidential 
+              - NonPublic
+              - Public        
   steps:
     - id: template
       name: Fetch Skeleton + Template
