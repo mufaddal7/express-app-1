@@ -31,6 +31,17 @@ spec:
           ui:options:
             allowedKinds:
               - Group
+        dataClassification:
+          title: Data Classification
+          type: string
+          description: AWS Tag - Defined by DAVE tagging
+          ui:field: TagPicker
+          ui:options:
+            tagAssigned:
+              - HighlyConfidential
+              - Confidential 
+              - NonPublic
+              - Public    
         docker_namespace:
           title: Docker Registry Namespace
           description: Docker registry namespace that image will be uploaded to. Eg. cpe
