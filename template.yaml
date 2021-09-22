@@ -35,9 +35,9 @@ spec:
           title: Data Classification
           type: string
           description: AWS Tag - Defined by DAVE tagging
-          ui:field: TagPicker
+          ui:field: TextValuePicker
           ui:options:
-            tagAssigned:
+            formData:
               - HighlyConfidential
               - Confidential 
               - NonPublic
