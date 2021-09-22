@@ -1,35 +1,74 @@
 apiVersion: backstage.io/v1beta2
 kind: Template
 metadata:
-  name: create-react-app-template
-  title: Create React App Template
-  description: Create a new CRA website project
+  name: demo-nodejs-standard
+  title: Demo Node.js Service deployable to EKS
+  description: Create a new Demo Node.js Service
   tags:
-    - react
-    - cra
+    - nodejs
+    - helm
+    - demo
 spec:
-  owner: web@example.com
-  type: website
+  owner: cpe
+  type: service
   parameters:
-    - title: Provide some simple information
+    - title: Configure Your Demo Node.js Service
       required:
-        - component_id
+        - service_name
         - owner
+        - docker_namespace
       properties:
-        component_id:
-          title: Name
+        service_name:
+          title: Service Name
           type: string
-          description: Unique name of the component
-        description:
-          title: Description
-          type: string
-          description: Help others understand what this website is for.
+          description: Unique service name. Eg random-nodejs-service
+          ui:autofocus: true
         owner:
           title: Owner
           type: string
           description: Owner of the component
           ui:field: OwnerPicker
           ui:options:
-            allowedKinds: 
+            allowedKinds:
               - Group
-  
+        docker_namespace:
+          title: Docker Registry Namespace
+          description: Docker registry namespace that image will be uploaded to. Eg. cpe
+          type: string
+    - title: Choose a location
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - gitlab.com
+  steps:
+    - id: template
+      name: Fetch Skeleton + Template
+      action: fetch:template
+      input:
+        url: ./
+        values:
+          service_name: '{{ parameters.service_name }}'
+          owner: '{{ parameters.owner }}'
+          docker_namespace: '{{ parameters.docker_namespace }}'
+    - id: publish
+      name: Publish
+      action: publish:gitlab
+      input:
+        allowedHosts: ['gitlab.com']
+        description: 'A simple "Hello World" node.js application deployable to EKS'
+        repoUrl: '{{ parameters.repoUrl }}'
+    - id: register
+      name: Register
+      action: catalog:register
+      input:
+        repoContentsUrl: '{{ steps.publish.output.repoContentsUrl }}'
+        catalogInfoPath: '/catalog-info.yaml'
+  output:
+    remoteUrl: '{{ steps.publish.output.remoteUrl }}'
+    entityRef: '{{ steps.register.output.entityRef }}'
