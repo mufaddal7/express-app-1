@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1beta2
 kind: Template
 metadata:
-  name: Options demo-nodejs-standard
+  name: Options-demo-nodejs-standard
   title: Options Demo Node.js Service deployable to EKS
   description: Create a new Demo Node.js Service
   tags:
