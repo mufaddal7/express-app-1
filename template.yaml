@@ -61,7 +61,7 @@ spec:
         AWSTags:
           title: AWS Tag - Defined by DAVE tagging
           type: string
-          ui:field: AWSTagPicker
+          ui:field: MyCustomExtension
           ui:options:
             tagAssigned:
               - HighlyConfidential
