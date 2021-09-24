@@ -35,7 +35,7 @@ spec:
           title: Data Classification
           type: string
           description: AWS Tag - Defined by DAVE tagging
-          ui:field: MyCustomExtension
+          ui:field: AWSTagPicker
           ui:options:
             allowedHosts:
               - Group
@@ -62,7 +62,7 @@ spec:
         AWSTags:
           title: AWS Tag - Defined by DAVE tagging
           type: string
-          ui:field: MyCustomExtension
+          ui:field: AWSTagPicker
           ui:options:
             tagAssigned:
               - HighlyConfidential
