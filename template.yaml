@@ -36,17 +36,6 @@ spec:
           type: string
           description: AWS Tag - Defined by DAVE tagging
           ui:field: AWSTagPicker
-        customDropDown:
-          title: Customized Drop Down
-          type: string
-          description: This Drop Down can be used any how 
-          ui:field: CustomEntityPicker
-          ui:options:
-            customOptions:
-              - We
-              - are
-              - building
-              - backstage
         docker_namespace:
           title: Docker Registry Namespace
           description: Docker registry namespace that image will be uploaded to. Eg. cpe
