@@ -40,6 +40,17 @@ spec:
           title: Docker Registry Namespace
           description: Docker registry namespace that image will be uploaded to. Eg. cpe
           type: string
+        customDropDown:
+          title: Customized Drop Down
+          type: string
+          description: This Drop Down can be used any how 
+          ui:field: CustomEntityPicker
+          ui:options:
+            customOptions:
+              - We
+              - are
+              - building
+              - backstage
     - title: Choose a location
       required:
         - repoUrl
