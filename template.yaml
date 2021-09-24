@@ -37,7 +37,7 @@ spec:
           description: AWS Tag - Defined by DAVE tagging
           ui:field: MyCustomExtension
           ui:options:
-            allowedKinds:
+            allowedHosts:
               - Group
               - User
         docker_namespace:
