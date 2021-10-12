@@ -8,6 +8,8 @@ metadata:
   annotations:
     example.com/service-discovery: artistweb
     circleci.com/project-slug: github/example-org/artist-website
+    jira/project-key: PEM
+
   tags:
     - java
   links:
