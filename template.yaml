@@ -12,6 +12,25 @@ spec:
   owner: cpe
   type: service
   parameters:
+    - properties:
+        firstName:
+          type: string
+          title: First name
+          default: Chuck
+          ui:autofocus: true
+          ui:emptyValue: ''
+          ui:autocomplete: family-name
+        lastName:
+          type: string
+          title: Last name
+          ui:emptyValue: ''
+          ui:autocomplete: given-name
+        nicknames:
+          type: array
+          items:
+            type: string
+          ui:options:
+            orderable: false
     - {title: Configure Your Demo Node.js Service, required: [service_name, owner, docker_namespace], properties: {service_name: {title: Service Name, type: string, description: Unique service name. Eg random-nodejs-service, ui:autofocus: true}, owner: {title: Owner, type: string, description: Owner of the component, ui:field: OwnerPicker, ui:options: {allowedKinds: [Group]}}, dataClassification: {title: Data Classification, type: string, description: AWS Tag - Defined by DAVE tagging, ui:field: AWSTagPicker}, customDropDown: {title: Customized Drop Down 1, type: string, description: This Drop Down can be used any how, ui:field: CustomEntityPicker, ui:options: {customOptions: [We, are, building, backstage]}}, docker_namespace: {title: Docker Registry Namespace, description: Docker registry namespace that image will be uploaded to. Eg. cpe, type: string}}}
     - {title: Choose a location, required: [repoUrl], properties: {repoUrl: {title: Repository Location, type: string, ui:field: RepoUrlPicker, ui:options: {allowedHosts: [gitlab.com]}}}}
     - {title: Data classification, required: [AWSTags], properties: {AWSTags: {title: AWS Tag - Defined by DAVE tagging, type: string, ui:field: AWSTagPicker, ui:options: {tagAssigned: [HighlyConfidential, Confidential, NonPublic, Public]}}}}
