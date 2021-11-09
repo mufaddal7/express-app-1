@@ -5,17 +5,20 @@ metadata:
   description: The place to be, for great artists
   labels:
     example.com/custom: custom_label_value
+    source: commit-2233
   annotations:
     example.com/service-discovery: artistweb
     circleci.com/project-slug: github/example-org/artist-website
     jira/project-key: '101460'
-
   tags:
     - java
   links:
     - url: https://admin.example-org.com
       title: Admin Dashboard
       icon: dashboard
+    - url: https://gitlab.com/williamhillplc/platform-engineering/portal/platform-engineering-portal/-/commit/784f0ee2ccc65b63fefc32b77cf5a0fbf1bb372a 
+      title: git source - Commit 784f0ee2
+       
 spec:
   type: website
   lifecycle: production
