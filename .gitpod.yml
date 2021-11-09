@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: artist-web
+  name: artist-web - new branch
   description: The place to be, for great artists
   labels:
     example.com/custom: custom_label_value
@@ -17,7 +17,7 @@ metadata:
       title: Admin Dashboard
       icon: dashboard
     - url: https://gitlab.com/williamhillplc/platform-engineering/portal/platform-engineering-portal/-/commit/784f0ee2ccc65b63fefc32b77cf5a0fbf1bb372a 
-      title: git source - Commit 784f0ee2
+      title: git source - New branch 
        
 spec:
   type: website
