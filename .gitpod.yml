@@ -9,7 +9,7 @@ metadata:
   annotations:
     example.com/service-discovery: artistweb
     circleci.com/project-slug: github/example-org/artist-website
-    jira/project-key: '101460'
+    newrelic.com/dashboard-guid: MjY0MDIwMXxWSVp8REFTSEJPQVJEfGRhOjQ5MTYyMw
   tags:
     - java
   links:
