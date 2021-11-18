@@ -9,7 +9,7 @@ metadata:
   annotations:
     example.com/service-discovery: artistweb
     newrelic.com/dashboard-guid: 
-      -MjY0MDIwMXxWSVp8REFTSEJPQVJEfGRhOjQ5MTYyMw
+      - MjY0MDIwMXxWSVp8REFTSEJPQVJEfGRhOjQ5MTYyMw
   tags:
     - java
   links:
