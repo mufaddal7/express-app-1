@@ -43,6 +43,7 @@ spec:
           ui:field: CustomEntityPicker
           ui:url: https://gitlab.com/mufaddalWH/express-app/-/raw/master/users.json
           ui:options:
+            url: https://gitlab.com/mufaddalWH/express-app/-/raw/master/users.json
             customOptions:
               - We
               - are
