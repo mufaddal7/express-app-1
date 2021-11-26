@@ -41,7 +41,7 @@ spec:
           type: string
           description: This Drop Down can be used any how 
           ui:field: CustomEntityPicker
-          ui:url: https://gitlab.com/mufaddalWH/express-app/-/blob/master/users.json
+          ui:url: https://gitlab.com/mufaddalWH/express-app/-/raw/master/users.json
           ui:options:
             customOptions:
               - We
