@@ -8,7 +8,7 @@ metadata:
     source: commit-2233
   annotations:
     example.com/service-discovery: artistweb
-    newrelic.com/dashboard-guid: MjY0MDIwMXxWSVp8REFTSEJPQVJEfGRhOjQ5MTYyMw
+    newrelic.com/dashboard-guid: MjYzOTE0M3xWSVp8REFTSEJPQVJEfGRhOjU0NjY1MQ
   tags:
     - java
   links:
