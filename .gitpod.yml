@@ -22,7 +22,7 @@ metadata:
       title: git source - Commit 784f0ee2
        
 spec:
-  type: website
+  type: service
   lifecycle: production
   owner: artist-relations-team
   system: public-websites
