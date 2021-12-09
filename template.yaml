@@ -31,11 +31,11 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-        entityPicker:
-          title: Entity Picker
+        system:
+          title: System
           type: string
-          description: enn
-          ui:field: OwnedEntityPicker
+          description: System of the component
+          ui:field: EntityPicker
           ui:options:
             allowedKinds:
               - System
