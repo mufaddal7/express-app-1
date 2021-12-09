@@ -35,7 +35,7 @@ spec:
           title: Entity Picker
           type: string
           description: enn
-          ui:field: EntityPicker
+          ui:field: OwnedEntityPicker
         dataClassification:
           title: Data Classification
           type: string
