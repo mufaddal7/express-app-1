@@ -36,10 +36,6 @@ spec:
           type: string
           description: System of the component
           ui:field: OwnedEntityPicker
-          ui:options:
-            allowedKinds:
-              - System
-            defaultKind: System
         dataClassification:
           title: Data Classification
           type: string
