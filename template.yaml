@@ -36,6 +36,9 @@ spec:
           type: string
           description: enn
           ui:field: OwnedEntityPicker
+          ui:options:
+            allowedKinds:
+              - Group
         dataClassification:
           title: Data Classification
           type: string
