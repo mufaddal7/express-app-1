@@ -31,6 +31,11 @@ spec:
           ui:options:
             allowedKinds:
               - Group
+        entityPicker:
+          title: Entity Picker
+          type: string
+          description: enn
+          ui:field: EntityPicker
         dataClassification:
           title: Data Classification
           type: string
