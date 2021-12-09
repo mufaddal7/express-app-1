@@ -38,7 +38,8 @@ spec:
           ui:field: OwnedEntityPicker
           ui:options:
             allowedKinds:
-              - Group
+              - System
+            defaultKind: System
         dataClassification:
           title: Data Classification
           type: string
