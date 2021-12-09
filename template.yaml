@@ -40,7 +40,7 @@ spec:
           title: All Entities
           type: string
           description: System of the component
-          ui:field: OwnedEntityPicker
+          ui:field: EntityPicker
 
         dataClassification:
           title: Data Classification
