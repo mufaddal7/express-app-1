@@ -31,11 +31,17 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-        system:
-          title: System
+        EntityOwner:
+          title: Owner Only
           type: string
           description: System of the component
           ui:field: OwnedEntityPicker
+        EntityAll:
+          title: All Entities
+          type: string
+          description: System of the component
+          ui:field: OwnedEntityPicker
+
         dataClassification:
           title: Data Classification
           type: string
