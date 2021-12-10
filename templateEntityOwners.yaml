@@ -9,7 +9,7 @@ metadata:
     - helm
     - demo
 spec:
-  owner: cpe
+  owner: team-a
   type: service
   parameters:
     - title: Configure Your Demo Node.js Service
