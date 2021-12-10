@@ -16,7 +16,6 @@ spec:
       required:
         - service_name
         - owner
-        - docker_namespace
       properties:
         service_name:
           title: Service Name
