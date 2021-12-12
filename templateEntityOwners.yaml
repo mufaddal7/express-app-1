@@ -29,7 +29,7 @@ spec:
           ui:field: OwnedEntityPicker
           ui:options:
             allowedKinds:
-              - component
+              - Group
         EntityAll:
           title: All Entities
           type: string
