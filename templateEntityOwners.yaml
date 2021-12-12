@@ -27,6 +27,9 @@ spec:
           type: string
           description: System of the component
           ui:field: OwnedEntityPicker
+          ui:options:
+            allowedKinds:
+              - component
         EntityAll:
           title: All Entities
           type: string
