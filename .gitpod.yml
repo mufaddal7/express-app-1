@@ -8,7 +8,7 @@ metadata:
     source: commit-2233
   annotations:
     example.com/service-discovery: artistweb
-    newrelic.com/dashboard-guid: MjY2NjU3MnxWSVp8REFTSEJPQVJEfGRhOjQ0OTc1MA
+    newrelic.com/dashboard-guid: MjYzOTE0M3xWSVp8REFTSEJPQVJEfGRhOjU0NjY1MQ
     backstage.io/kubernetes-id: "eks01"
     kafka.apache.org/consumer-groups: unity-sit-new-msk-sit-new/be-trading
 
