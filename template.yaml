@@ -31,38 +31,38 @@ spec:
           ui:options:
             allowedKinds:
               - Group
-        # EntityOwner:
-        #   title: Owner Only
-        #   type: string
-        #   description: System of the component
-        #   ui:field: OwnedEntityPicker
-        # EntityAll:
-        #   title: All Entities
-        #   type: string
-        #   description: System of the component
-        #   ui:field: EntityPicker
+        EntityOwner:
+          title: Owner Only
+          type: string
+          description: System of the component
+          ui:field: OwnedEntityPicker
+        EntityAll:
+          title: All Entities
+          type: string
+          description: System of the component
+          ui:field: EntityPicker
 
-        # dataClassification:
-        #   title: Data Classification
-        #   type: string
-        #   description: AWS Tag - Defined by DAVE tagging
-        #   ui:field: AWSTagPicker
-        # customDropDown:
-        #   title: Customized Drop Down 1
-        #   type: string
-        #   description: This Drop Down can be used any how 
-        #   ui:field: CustomEntityPicker
-        #   ui:url: https://gitlab.com/mufaddalWH/express-app/-/raw/master/users.json
-        #   ui:options:
-        #     customOptions:
-        #       - We
-        #       - are
-        #       - building
-        #       - backstage  
-        # docker_namespace:
-        #   title: Docker Registry Namespace
-        #   description: Docker registry namespace that image will be uploaded to. Eg. cpe
-        #   type: string
+        dataClassification:
+          title: Data Classification
+          type: string
+          description: AWS Tag - Defined by DAVE tagging
+          ui:field: AWSTagPicker
+        customDropDown:
+          title: Customized Drop Down 1
+          type: string
+          description: This Drop Down can be used any how 
+          ui:field: CustomEntityPicker
+          ui:url: https://gitlab.com/mufaddalWH/express-app/-/raw/master/users.json
+          ui:options:
+            customOptions:
+              - We
+              - are
+              - building
+              - backstage  
+        docker_namespace:
+          title: Docker Registry Namespace
+          description: Docker registry namespace that image will be uploaded to. Eg. cpe
+          type: string
     - title: Choose a location
       required:
         - repoUrl
