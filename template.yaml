@@ -23,14 +23,14 @@ spec:
           type: string
           description: Unique service name. Eg random-nodejs-service
           ui:autofocus: true
-        # owner:
-        #   title: Owner
-        #   type: string
-        #   description: Owner of the component
-        #   ui:field: OwnerPicker
-        #   ui:options:
-        #     allowedKinds:
-        #       - Group
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the component
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
         # EntityOwner:
         #   title: Owner Only
         #   type: string
@@ -83,7 +83,6 @@ spec:
         values:
           service_name: '{{ parameters.service_name }}'
           owner: '{{ parameters.owner }}'
-          docker_namespace: '{{ parameters.docker_namespace }}'
     - id: publish
       name: Publish
       action: zip:download
