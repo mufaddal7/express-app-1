@@ -100,7 +100,7 @@ spec:
           docker_namespace: '{{ parameters.docker_namespace }}'
     - id: publish
       name: Publish
-      action: publish:gitlab
+      action: zip:download
       input:
         allowedHosts: ['gitlab.com']
         description: 'A simple "Hello World" node.js application deployable to EKS'
