@@ -27,3 +27,5 @@ spec:
   owner: artist-relations-team
   system: public-websites
   source: commit-2233
+  providesApis:
+    - audit-api
