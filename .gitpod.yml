@@ -28,4 +28,4 @@ spec:
   system: public-websites
   source: commit-2233
   providesApis:
-    - audit-api
+    - wallet-service
