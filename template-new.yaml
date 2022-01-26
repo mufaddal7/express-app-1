@@ -22,9 +22,9 @@ spec:
           ui:options:
             requestUserCredentials:
               resultSecretsKey: userToken
-              additionalScopes:
-                github:
-                  - workflow
+              # additionalScopes:
+              #   github:
+              #     - workflow
             allowedHosts:
               - github.com
               - gitlab.com
@@ -40,9 +40,9 @@ spec:
           
     - id: publish
       name: Publish
-      action: publish:github
+      action: publish:gitlab
       input:
-        allowedHosts: ['github.com']
+        allowedHosts: ['gitlab.com']
         description: 'This is ${{ parameters.component_id }}'
         repoUrl: ${{ parameters.repoUrl }}
         token: ${{ secrets.userToken }}
