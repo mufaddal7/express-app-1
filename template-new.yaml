@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: auth template
-  title: React SSR Template
+  name: auth-template
+  title: Auth Template
   description: Create a website powered with Next.js
   tags:
     - recommended
