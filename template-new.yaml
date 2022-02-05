@@ -22,9 +22,11 @@ spec:
           ui:options:
             requestUserCredentials:
               resultSecretsKey: userToken
-              # additionalScopes:
-              #   github:
-              #     - workflow
+              additionalScopes:
+                github:
+                  - workflow
+                gitlab:
+                  - workflow
             allowedHosts:
               - github.com
               - gitlab.com
