@@ -26,7 +26,8 @@ spec:
                 github:
                   - workflow
                 gitlab:
-                  - workflow
+                  - write_repository
+                  - write_registry
             allowedHosts:
               - github.com
               - gitlab.com
