@@ -21,10 +21,10 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             requestUserCredentials:
-              secretsKey: userToken
+              secretsKey: USER_OAUTH_TOKEN
               additionalScopes:
                 github:
-                  - workflow
+                  - workflow:write
                 gitlab:
                   - write_repository
                   - write_registry
