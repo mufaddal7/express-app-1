@@ -47,8 +47,8 @@ spec:
           
     - id: publish
       name: Publish
-      # action: publish:gitlab
-      action: publish:github
+      action: publish:gitlab
+      # action: publish:github
       input:
         allowedHosts: ['github.com']
         description: 'This is ${{ parameters.component_id }}'
