@@ -27,11 +27,6 @@ spec:
                   - workflow:write
                 gitlab:
                   - write_repository
-                  - write_registry
-                  - sudo
-                  - read_repository
-                  - read_api
-                  - api
             allowedHosts:
               - github.com
               - gitlab.com
