@@ -25,8 +25,9 @@ spec:
               additionalScopes:
                 github:
                   - workflow:write
-                # gitlab:
-                  # - write_repository
+                gitlab:
+                  - write_repository
+                  - sudo
             allowedHosts:
               - github.com
               - gitlab.com
