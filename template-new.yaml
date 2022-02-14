@@ -27,7 +27,6 @@ spec:
                   - workflow:write
                 gitlab:
                   - write_repository
-                  - sudo
             allowedHosts:
               - github.com
               - gitlab.com
