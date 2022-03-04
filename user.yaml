@@ -1,0 +1,66 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: cpe-portal-5
+  description: Portal
+  links:
+    - title: GitLab - Engineering Portal
+      url: https://gitlab.com/williamhillplc/platform-engineering/portal/platform-engineering-portal
+      icon: http
+    - title: GitLab - Portal Catalog Center
+      url: https://gitlab.com/williamhillplc/platform-engineering/portal/portal-catalog-center
+      icon: http
+spec:
+  type: team
+  profile:
+    displayName: Portal
+    email: platform_engineering@williamhill.co.uk
+    picture: https://avatars.dicebear.com/api/jdenticon/cpe-portal.svg?background=%23fff&margin=25
+  parent: cpe
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: nishkarsh.raj
+spec:
+  profile:
+    displayName: Nishkarsh Raj
+    email: nishkarsh.raj@williamhill.co.uk
+    picture: https://avatars.dicebear.com/api/jdenticon/nishkarsh.raj.svg?background=%23fff
+  memberOf: [cpe-portal]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: mufaddal.motiwala
+spec:
+  profile:
+    displayName: Mufaddal Motiwala
+    email: mufaddal.motiwala@williamhill.co.uk
+    picture: https://avatars.dicebear.com/api/jdenticon/mufaddal.motiwala.svg?background=%23fff
+  memberOf: [cpe-portal]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: shivam.bisht
+spec:
+  profile:
+    displayName: Shivam Bisht
+    email: shivam.bisht@williamhill.co.uk
+    picture: https://avatars.dicebear.com/api/jdenticon/shivam.bisht.svg?background=%23fff
+  memberOf: [cpe-portal]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: nitin.gupta
+spec:
+  profile:
+    displayName: Nitin Gupta
+    email: nitin.gupta@williamhill.co.uk
+    picture: https://avatars.dicebear.com/api/jdenticon/nitin.gupta.svg?background=%23fff
+  memberOf: [cpe-portal]
+---
